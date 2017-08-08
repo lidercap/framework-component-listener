@@ -25,7 +25,9 @@ Instalação
 Adicionando um listener a um evento
 -----------------------------------
 
-Adiciona um evento na fila de eventos a serem lançados e atribui um callback a este evento.
+Adiciona um listeners na fila de eventos um evento.
+
+Não há limite no número de listeners a serem adicionados à fila.
 
 ```php
 <?php
@@ -91,6 +93,6 @@ Para rodar a suite de testes, você deve instalar as dependências externas do p
 Responsáveis técnicos
 ---------------------
 
- * **André Sabino: <asabino@lidercap.com.br>**
+ * **André Sabino    : <asabino@lidercap.com.br>**
  * **Fernando Villaça: <fvillaca@lidercap.com.br>**
- * **Leonardo Thibes: <lthibes@lidercap.com.br>**
+ * **Leonardo Thibes : <lthibes@lidercap.com.br>**
