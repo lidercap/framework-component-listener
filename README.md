@@ -22,10 +22,8 @@ Instalação
 }
 ```
 
-Trabalhando com eventos simples
--------------------------------
-
-### Adicionando um listener a um evento
+Adicionando um listener a um evento
+-----------------------------------
 
 Adiciona um listeners na fila de eventos um evento.
 
@@ -34,7 +32,7 @@ Não há limite no número de listeners a serem adicionados à fila.
 ```php
 <?php
 
-\Lidercap\Component\Listener\Event::bind('event.name', function(array $args = []) 
+\Lidercap\Component\Listener\EventListener::bind('event.name', function(array $args = []) 
 {
     // Aqui algo vai o código que se deseja disparar para o evento.
 
@@ -52,7 +50,8 @@ Não há limite no número de listeners a serem adicionados à fila.
 
 ```
 
-### Disparando os listeners de um evento
+Disparando os listeners de um evento
+------------------------------------
 
 Dispara a execussão de todos os listeners definidos para um evento.
 
@@ -61,7 +60,7 @@ Os listeners serão executados na ordem em que foram adicionados ao evento.
 ```php
 <?php
 
-\Lidercap\Component\Listener\Event::trigger('event.name', $args);
+\Lidercap\Component\Listener\EventListener::trigger('event.name', $args);
 
 /**
  * OBS 1: Os argumentos são opcionais.
