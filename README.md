@@ -85,8 +85,8 @@ Dependências:
 Para rodar a suite de testes, você deve instalar as dependências externas do projeto e então rodar o PHPUnit.
 
     $ make install
-    $ make test    (sem relatório de coverage)
-    $ make testdox (com relatório de coverage)
+    $ make testdox (com relatório detalhado)
+    $ make test    (sem relatório simples)
 
 Responsáveis técnicos
 ---------------------
