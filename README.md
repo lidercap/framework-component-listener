@@ -22,8 +22,10 @@ Instalação
 }
 ```
 
-Adicionando um listener a um evento
------------------------------------
+Trabalhando com eventos simples
+-------------------------------
+
+### Adicionando um listener a um evento
 
 Adiciona um listeners na fila de eventos um evento.
 
@@ -50,8 +52,7 @@ Não há limite no número de listeners a serem adicionados à fila.
 
 ```
 
-Disparando os listeners de um evento
-------------------------------------
+### Disparando os listeners de um evento
 
 Dispara a execussão de todos os listeners definidos para um evento.
 
