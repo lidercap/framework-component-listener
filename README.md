@@ -88,8 +88,6 @@ Use com sabedoria.
 
  \Lidercap\Component\Listener\Event::strictMode(true); // Ativa
 
- //                   ou 
-
  \Lidercap\Component\Listener\Event::strictMode(false); // Desativa (default)
 
 ```
