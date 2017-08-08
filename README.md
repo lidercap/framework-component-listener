@@ -38,13 +38,35 @@ Adiciona um evento na fila de eventos a serem lançados e atribui um callback a 
      * OBS 1: Os argumentos da função sempre deverão ser declarados
      *        como opcionais para não quebrar o código
      */
-     
+
      /**
      * OBS 2: Os listener de um evento são acumulativos, não substitutivos.
      *        Ou seja, ao chamar o método "bind" uma segunda vez para um 
      *        mesmo evento, um segundo listener estará sendo adicionado.
      */
 });
+
+```
+
+Disparando um evento
+--------------------
+
+Dispara a execussão de todos os listeners definidos para um evento.
+
+```php
+<?php
+
+\Lidercap\Component\Listener\Event::trigger('event.name', $args);
+
+/**
+ * OBS 1: Os argumentos são opcionais.
+ */
+
+ /**
+  * OBS 2: Caso o modo strict do componente esteja ativado, o disparo
+  *        de eventos sem listeners irá lançar uma excessão. Caso contrário,
+  *        nenhum efeito ou erro é esperado.
+  */
 
 ```
 
