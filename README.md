@@ -34,16 +34,16 @@ Adiciona um evento na fila de eventos a serem lançados e atribui um callback a 
 {
     // Aqui algo vai o código que se deseja disparar para o evento.
 
+    /**
+     * OBS 1: Os argumentos da função sempre deverão ser declarados
+     *        como opcionais para não quebrar o código
+     */
+     
      /**
-      * OBS 1: Os argumentos da função sempre deverão ser declarados
-      *        como opcionais para não quebrar o código
-      */
-
-      /**
-      * OBS 2: Os listener de um evento são acumulativos, não substitutivos.
-      *        Ou seja, ao chamar o método "bind" uma segunda vez para um 
-      *        mesmo evento, um segundo listener estará sendo adicionado.
-      */
+     * OBS 2: Os listener de um evento são acumulativos, não substitutivos.
+     *        Ou seja, ao chamar o método "bind" uma segunda vez para um 
+     *        mesmo evento, um segundo listener estará sendo adicionado.
+     */
 });
 
 ```
