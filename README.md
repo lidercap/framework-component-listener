@@ -1,36 +1,39 @@
-Nome do Projeto
-===============
+Component Listener
+==================
 
-Aqui vai uma pequena descrição do projeto, falando um pouco sobre seu propósito e os problemas que ele se propõe a resolver.
+Listener de eventos.
 
 Instalação
 ----------
 
-É recomendado instalar **[nome-do-projeto]** através do [composer](http://getcomposer.org).
+É recomendado instalar **component-listener** através do [composer](http://getcomposer.org).
 
 ```json
 {
     "require": {
-        "lidercap/framework-[nome-do-projeto]": "dev-master"
+        "lidercap/framework-component-listener": "dev-master"
     },
     "repositories": [
         {
             "type": "vcs",
-            "url":  "git@bitbucket.org:lidercap/framework-[nome-do-projeto].git"
+            "url":  "git@bitbucket.org:lidercap/framework-component-listener.git"
         }
     ]
 }
 ```
 
-NOME DA FUNÇÃO
---------------
+Criando um evento
+-----------------
 
-Descrição da função.
+Adiciona um evento na fila de eventos a serem lançados e atribui um callback a este evento.
 
 ```php
 <?php
 
-// Coloque aqui exemplos de uso
+\Lidercap\Component\Listener\Event::bind('event.name', function(array $args = []) 
+{
+    // Aqui algo vai o código que se deseja disparar para o evento.
+});
 
 ```
 
@@ -39,7 +42,7 @@ Desenvolvimento e Testes
 
 Dependências:
 
- * PHP 5.5.x ou superior
+ * PHP 7.0.x ou superior
  * Composer
  * Git
  * Make
