@@ -1,6 +1,6 @@
 <?php
 
-namespace Lidercap\Skeleton;
+namespace Lidercap\Component\Listener;
 
 class Ola
 {
