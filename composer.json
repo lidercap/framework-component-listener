@@ -1,7 +1,7 @@
 {
-  "name": "lidercap/framework-skeleton",
-  "description": "Esqueleto de componentes PHP",
-  "version": "1.0.0",
+  "name": "lidercap/framework-component-listener",
+  "description": "Listener de eventos",
+  "version": "0.1.0",
   "license": "proprietary",
   "type": "library",
   "config": {
@@ -9,12 +9,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Lidercap\\Skeleton\\": "src/"
+      "Lidercap\\Component\\Listener\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Lidercap\\Tests\\Skeleton\\": "tests/"
+      "Lidercap\\Tests\\Component\\Listener\\": "tests/"
     }
   },
   "require": {
