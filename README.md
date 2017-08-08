@@ -25,7 +25,7 @@ Instalação
 Adicionando um listener a um evento
 -----------------------------------
 
-Adiciona um listeners na fila de eventos um evento.
+Adiciona um listener na fila de um evento.
 
 Não há limite no número de listeners a serem adicionados à fila.
 
