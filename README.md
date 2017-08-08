@@ -84,6 +84,7 @@ Este recurso é desativado por default.
 Use com sabedoria.
 
 ```php
+<?php
 
  \Lidercap\Component\Listener\Event::strictMode(true); // Ativa
 
