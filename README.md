@@ -48,10 +48,12 @@ Adiciona um evento na fila de eventos a serem lançados e atribui um callback a 
 
 ```
 
-Disparando um evento
---------------------
+Disparando os listeners de um evento
+------------------------------------
 
 Dispara a execussão de todos os listeners definidos para um evento.
+
+Os listeners serão executados na ordem em que foram adicionados ao evento.
 
 ```php
 <?php
