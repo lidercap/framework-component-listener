@@ -4,8 +4,46 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa2f4283b3221aeb6fe85db771e428aa",
-    "packages": [],
+    "content-hash": "c16cb4707569060ae369c3e69037bd42",
+    "packages": [
+        {
+            "name": "lidercap/framework-core",
+            "version": "1.1.11",
+            "source": {
+                "type": "git",
+                "url": "git@bitbucket.org:lidercap/framework-core.git",
+                "reference": "5cdd29a0482a1ecb1fbd7d71da8a2086e309b063"
+            },
+            "require": {
+                "ext-xml": "*",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "ext-xdebug": "*",
+                "phpmd/phpmd": "^2.6",
+                "phpunit/phpunit": "^4.8",
+                "sebastian/phpcpd": "2.0.*",
+                "sebastian/phpdcd": "^1.0",
+                "squizlabs/php_codesniffer": "^2.6"
+            },
+            "type": "component",
+            "autoload": {
+                "psr-4": {
+                    "Lidercap\\Core\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Lidercap\\Tests\\Core\\": "tests/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Base de código para outros componentes",
+            "time": "2017-04-03T18:48:29+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",

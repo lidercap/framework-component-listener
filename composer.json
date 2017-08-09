@@ -18,7 +18,8 @@
     }
   },
   "require": {
-    "php": ">=7.0.0"
+    "php": ">=7.0.0",
+    "lidercap/framework-core": "^1.1"
   },
   "require-dev": {
     "ext-xdebug": "*",
@@ -28,6 +29,12 @@
     "sebastian/phpdcd": "^1.0",
     "squizlabs/php_codesniffer": "^2.6"
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url":  "git@bitbucket.org:lidercap/framework-core.git"
+    }
+  ],
   "minimum-stability": "dev",
   "prefer-stable": true
 }
