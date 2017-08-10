@@ -9,6 +9,8 @@ class TriggersTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         $triggers = Triggers::getInstance();
+        $triggers->setStrict(false);
+
         $property = new \ReflectionProperty($triggers, 'triggers');
         $property->setAccessible(true);
         $property->setValue($triggers, []);
@@ -33,6 +35,43 @@ class TriggersTest extends \PHPUnit_Framework_TestCase
         $events = $property->getValue($object);
         $this->assertArrayHasKey($event, $events);
         $this->assertEquals($number, $events[$event][0]());
+    }
+
+    public function testTriggerNotFount()
+    {
+        Triggers::getInstance()->trigger('not.found');
+    }
+
+    /**
+     * @expectedException \Lidercap\Component\Listener\Exception\EventListenerException
+     * @expectedExceptionMessage Evento não registrado: not.found
+     * @expectedExceptionCode -1
+     */
+    public function testTriggerNotFountException()
+    {
+        $triggers = Triggers::getInstance();
+        $triggers->setStrict(true);
+        $triggers->trigger('not.found');
+    }
+
+    public function testTriggerSuccess()
+    {
+        $code = rand(1, 100);
+        $list = [
+            'event.name' => [
+                0 => function($expected) use ($code) {
+                    $this->assertEquals($expected[0], $code);
+                }
+            ]
+        ];
+
+        $triggers = Triggers::getInstance();
+
+        $property = new \ReflectionProperty($triggers, 'triggers');
+        $property->setAccessible(true);
+        $property->setValue($triggers, $list);
+
+        $triggers->trigger('event.name', [$code]);
     }
 
     public function testFetchAllEmpty()

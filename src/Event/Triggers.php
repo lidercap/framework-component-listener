@@ -34,6 +34,23 @@ class Triggers
     }
 
     /**
+     * Lança todos os triggers de um evento.
+     *
+     * @param string $event Nome do evento.
+     * @param array  $args  Lista de argumentos a serem passados para o Closure de callback.
+     *
+     * @throws Exception\EventListenerException para eventos não encontrados, caso
+     *                                          o modo strict esteja ativado.
+     */
+    public function trigger(string $event, array $args = [])
+    {
+        $triggers = $this->fetch($event);
+        foreach ($triggers as $trigger) {
+            \call_user_func($trigger, $args);
+        }
+    }
+
+    /**
      * Recupera a fila de triggers inteira.
      *
      * @return array
