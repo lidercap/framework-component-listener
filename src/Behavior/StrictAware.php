@@ -12,15 +12,19 @@ trait StrictAware
     /**
      * @var bool
      */
-    protected static $strict = false;
+    protected $strict = false;
 
     /**
      * Ativa/desativa o modo strict do componente.
      *
      * @param bool $strict
+     *
+     * @return $this
      */
-    public static function strictMode(bool $strict)
+    public function setStrict(bool $strict = true) : self
     {
-        self::$strict = $strict;
+        $this->strict = $strict;
+
+        return $this;
     }
 }

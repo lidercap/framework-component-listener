@@ -12,7 +12,7 @@ class Event
     use Behavior\StrictAware;
 
     /**
-     * Adiciona um listener na fila de um evento.
+     * Adiciona um trigger na fila de um evento.
      *
      * @param string   $event    Nome do evento.
      * @param \Closure $callback Função de callback.
