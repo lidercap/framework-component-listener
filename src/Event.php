@@ -4,12 +4,22 @@ declare(strict_types=1);
 
 namespace Lidercap\Component\Listener;
 
+use Lidercap\Component\Listener\Event\Triggers;
+
 /**
  * Event Listener.
  */
 class Event
 {
-    use Behavior\StrictAware;
+    /**
+     * Ativa/desativa o strict mode do componente.
+     *
+     * @param bool $strict
+     */
+    public static function strictMode(bool $strict)
+    {
+        Triggers::getInstance()->setStrict($strict);
+    }
 
     /**
      * Adiciona um trigger na fila de um evento.
@@ -19,7 +29,7 @@ class Event
      */
     public static function bind(string $event, \Closure $callback)
     {
-        self::$events[$event][] = $callback;
+        Triggers::getInstance()->bind($event, $callback);
     }
 
     /**
@@ -33,9 +43,6 @@ class Event
      */
     public static function trigger(string $event, array $args = [])
     {
-        $triggers = self::fetch($event);
-        foreach ($triggers as $trigger) {
-            \call_user_func($trigger, $args);
-        }
+        Triggers::getInstance()->trigger($event, $args);
     }
 }
