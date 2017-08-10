@@ -9,16 +9,11 @@ class EventTest extends \PHPUnit_Framework_TestCase
     public function testBindSuccess()
     {
         $event = Event::getInstance();
+        $event->bind('event.name', function() {});
 
-        $callback = function() {};
+        $property = new \ReflectionProperty($event, 'events');
+        $property->setAccessible(true);
 
-        var_dump(get_class($callback));
-        var_dump(is_object($callback));
-
-        $this->assertInstanceOf(\Closure::class, $callback);
-
-        // $event->bind('event.name', $callback);
-
-        // print_r($event);
+        print_r($event::$events['event.name']);
     }
 }
