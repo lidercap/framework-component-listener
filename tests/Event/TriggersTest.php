@@ -17,7 +17,7 @@ class TriggersTest extends \PHPUnit_Framework_TestCase
         $event  = 'event-' . rand(1, 100);
 
         $triggers = Triggers::getInstance();
-        $object   = $triggers->bind($event, function() use ($number) {
+        $object   = $triggers->bind($event, function () use ($number) {
             return $number;
         });
 
@@ -53,7 +53,7 @@ class TriggersTest extends \PHPUnit_Framework_TestCase
         $code = rand(1, 100);
         $list = [
             'event.name' => [
-                0 => function($expected) use ($code) {
+                0 => function ($expected) use ($code) {
                     $this->assertEquals($expected[0], $code);
                 }
             ]

@@ -36,7 +36,7 @@ class EventTest extends \PHPUnit_Framework_TestCase
         $number = rand(1000, 2000);
         $event  = 'event-' . rand(1, 100);
 
-        Event::bind($event, function() use ($number) {
+        Event::bind($event, function () use ($number) {
             return $number;
         });
 
@@ -54,7 +54,7 @@ class EventTest extends \PHPUnit_Framework_TestCase
         $code = rand(1, 100);
         $list = [
             'event.name' => [
-                0 => function($expected) use ($code) {
+                0 => function ($expected) use ($code) {
                     $this->assertEquals($expected[0], $code);
                 }
             ]
