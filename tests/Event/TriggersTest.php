@@ -8,13 +8,7 @@ class TriggersTest extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-        $triggers = Triggers::getInstance();
-        $triggers->setStrict(false);
-
-        $property = new \ReflectionProperty($triggers, 'triggers');
-        $property->setAccessible(true);
-        $property->setValue($triggers, []);
-        $property->setAccessible(false);
+        $triggers = Triggers::resetInstance();
     }
 
     public function testBind()
