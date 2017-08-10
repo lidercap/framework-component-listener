@@ -57,9 +57,9 @@ Os listeners serão executados na ordem em que foram adicionados ao evento.
 
 \Lidercap\Component\Listener\Event::trigger('event.name', $args);
 
-/**
- * OBS 1: Os argumentos são opcionais.
- */
+ /**
+  * OBS 1: Os argumentos são opcionais.
+  */
 
  /**
   * OBS 2: Caso o modo strict do componente esteja ativado, o disparo
