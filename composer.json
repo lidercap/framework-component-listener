@@ -1,7 +1,7 @@
 {
   "name": "lidercap/framework-component-listener",
   "description": "Listener de eventos",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "proprietary",
   "type": "library",
   "config": {
@@ -32,7 +32,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url":  "git@bitbucket.org:lidercap/framework-core.git"
+      "url":  "git@github.com:lidercap/framework-core.git"
     }
   ],
   "minimum-stability": "dev",
