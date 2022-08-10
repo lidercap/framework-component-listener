@@ -32,7 +32,7 @@
   "repositories": [
     {
       "type": "vcs",
-      "url":  "git@bitbucket.org:lidercap/framework-core.git"
+      "url":  "git@github.com:lidercap/framework-core.git"
     }
   ],
   "minimum-stability": "dev",
